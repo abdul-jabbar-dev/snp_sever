@@ -1,0 +1,1 @@
+SELECT * FROM RefreshTokens WHERE refreshToken = @refreshToken;
