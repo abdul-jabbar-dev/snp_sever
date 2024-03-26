@@ -17,7 +17,10 @@ const app = express();
 
 app.use(morganMiddleware);
 app.use(credentials);
-app.use(cors());
+app.use(cors({
+  origin: 'https://66035c6f8fa7e4121a116eee--funny-semolina-3634d5.netlify.app',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
