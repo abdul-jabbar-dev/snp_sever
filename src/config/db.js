@@ -4,7 +4,7 @@ import assert from 'assert';
 
 config();
 
-const {PORT, HOST, HOST_URL, SQL_USER, SQL_PASSWORD, SQL_DATABASE, SQL_SERVER} = process.env;
+const {PORT, HOST, SQL_USER, SQL_PASSWORD, SQL_DATABASE, SQL_SERVER} = process.env;
 
 const sqlEncrypt = process.env.SQL_ENCRYPT === "true";
 
@@ -13,7 +13,7 @@ assert(HOST, 'HOST is required');
 
 export const port = PORT;
 export const host = HOST;
-export const url = HOST_URL;
+// export const url = HOST_URL;
 
 export const configg = {
     server: SQL_SERVER,
