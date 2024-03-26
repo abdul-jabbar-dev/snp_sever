@@ -8,7 +8,6 @@ import LandRoutes from "./src/routes/land.route.js";
 import UserRoutes from "./src/routes/user.route.js";
 import FormRoutes from "./src/routes/form.route.js";
 
-import { corsOptions } from "./src/config/corsOptions.js";
 import { credentials } from "./src/middleware/credentails.js";
 import { morganMiddleware } from "./src/middleware/logger.js";
 import { port } from "./src/config/db.js";
@@ -18,7 +17,7 @@ const app = express();
 
 app.use(morganMiddleware);
 app.use(credentials);
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
