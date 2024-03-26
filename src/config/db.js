@@ -19,6 +19,7 @@ export const configg = {
     server: SQL_SERVER,
     database: SQL_DATABASE,
     user: SQL_USER,
+    port: 19999,
     password: SQL_PASSWORD,
     options: {
         encrypt: sqlEncrypt,
