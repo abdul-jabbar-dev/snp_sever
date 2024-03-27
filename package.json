@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,6 @@
     "dotenv": "^16.4.3",
     "express": "^4.18.2",
     "fs-extra": "^11.2.0",
-    "helmet": "^7.1.0",
     "mailgen": "^2.0.28",
     "morgan": "^1.10.0",
     "mssql": "^10.0.2",

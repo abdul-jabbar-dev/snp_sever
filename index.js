@@ -17,10 +17,15 @@ const app = express();
 app.use(morganMiddleware);
 // app.use(credentials);
 app.use(
-  cors({
-    origin: ["https://snapsi-dev.netlify.app", "https://snapsi-dev.netlify.app/*", "https://snapsi-dev.netlify.app/"],
-    credentials: true,
-  })
+  cors(/* {
+    origin: "http://localhost:5173",
+    // "https://snapsi-dev.netlify.app",
+    // "https://snapsi-dev.netlify.app/*",
+    // "https://snapsi-dev.netlify.app/",
+
+    // credentials: true,
+    // preflightContinue: false,
+  } */)
 );
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
