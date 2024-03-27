@@ -7,7 +7,7 @@ import UserRoutes from "./src/routes/user.route.js";
 import FormRoutes from "./src/routes/form.route.js";
 
 import { credentials } from "./src/middleware/credentails.js";
-import { morganMiddleware } from "./src/middleware/logger.js";
+// import { morganMiddleware } from "./src/middleware/logger.js";
 import { port } from "./src/config/db.js";
 import verifyJWT from "./src/middleware/verifyJWT.js";
 
