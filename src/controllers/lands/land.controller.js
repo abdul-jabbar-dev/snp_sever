@@ -11,7 +11,8 @@ export const getAllLands = async (req, res, next) => {
     const landList = await getLands(data);
     res.send(landList);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -39,7 +40,8 @@ export const getIndexCard = async (req, res, next) => {
       res.send([]);
     }
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -60,7 +62,8 @@ export const getLandTitleDetails = async (req, res, next) => {
     };
     res.send(landTileDetailsRespons);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -69,6 +72,7 @@ export const updateIdentityHandler = async (req, res, next) => {
     const identityRes = await updateIdentity(req.body);
     res.status(200).json({ message: "Identity updated successfully" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };

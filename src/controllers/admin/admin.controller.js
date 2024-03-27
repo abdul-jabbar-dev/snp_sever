@@ -44,7 +44,8 @@ export const updateAdminIndexStageHandler = async (req, res, next) => {
     await UpdateAdminIndexCardStage(req.body);
     res.status(200).send({ message: "updated stage successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -53,6 +54,7 @@ export const updateAdminLandStageHandler = async (req, res, next) => {
     await UpdateAdminLandDataStage(req.body);
     res.status(200).send({ message: "updated stage successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };

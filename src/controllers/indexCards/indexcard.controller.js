@@ -25,7 +25,8 @@ export const updateIndexVerfiedHandler = async (req, res, next) => {
     await UpdateIndexCardVerified(req.body);
     res.status(200).send({ message: "updated successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 export const updateIndexCommentHandler = async (req, res, next) => {
@@ -33,7 +34,8 @@ export const updateIndexCommentHandler = async (req, res, next) => {
     await UpdateIndexCardComment(req.body);
     res.status(200).send({ message: "Comment successfully!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -75,7 +77,8 @@ export const indexAttributeStatusHandler = async (req, res, next) => {
 
     res.send(propertyResponse);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -105,7 +108,8 @@ export const indexAttributeEditHandler = async (req, res, next) => {
     await UpdateTableData(edittInput);
     res.send(propertyResponse);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -120,7 +124,8 @@ export const getIndexAttributesHandler = async (req, res, next) => {
     const updatedProperty = convertProperties(propertyResponse);
     res.send(updatedProperty);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -129,7 +134,8 @@ export const checkAllVerifiedHandler = async (req, res, next) => {
     await CheckAllVerfied(req.body);
     res.status(200).send({ message: "updated checked table successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -138,7 +144,8 @@ export const updateIndexStageHandler = async (req, res, next) => {
     await UpdateIndexCardStage(req.body);
     res.status(200).send({ message: "updated stage successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -149,6 +156,7 @@ export const updateIndexCardValueHandler = async (req, res, next) => {
       .status(200)
       .send({ message: "updated indexCard Value successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };

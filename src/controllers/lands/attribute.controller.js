@@ -27,7 +27,8 @@ export const createOrUpdateTableCommentHandler = async (req, res, next) => {
     const result = await getTableComment(req.body);
     res.send(result);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -52,7 +53,8 @@ export const attributeStatusHandler = async (req, res, next) => {
 
     res.send(propertyResponse);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -76,7 +78,8 @@ export const attributeCommentHandler = async (req, res, next) => {
 
     res.send(propertyResponse);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -107,7 +110,8 @@ export const attributeEditHandler = async (req, res, next) => {
     await UpdateTableData(edittInput);
     res.send(propertyResponse);
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -124,7 +128,8 @@ export const getPropertyHandler = async (req, res, next) => {
     const updatedProperty = convertProperties(propertyResponse);
     res.send({ updatedProperty, tableData });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -133,7 +138,8 @@ export const attributeCheckedAllHandler = async (req, res, next) => {
     await CheckedPropertiesAll(req.body);
     res.status(200).send({ message: "checked all successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -142,7 +148,8 @@ export const updateStageHandler = async (req, res, next) => {
     await UpdateStage(req.body);
     res.status(200).send({ message: "updated stage successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -151,7 +158,8 @@ export const updateCheckTableHandler = async (req, res, next) => {
     await UpdateCheckedTable(req.body);
     res.status(200).send({ message: "updated checked table successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
 
@@ -160,6 +168,7 @@ export const updateOriginInfoHandler = async (req, res, next) => {
     await UpdateTableData(req.body);
     res.status(200).send({ message: "updated table successfullyy!!" });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error)
+res.status(400).send(error.message);
   }
 };
