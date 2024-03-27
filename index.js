@@ -18,7 +18,7 @@ app.use(morganMiddleware);
 // app.use(credentials);
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://snapsi-dev.netlify.app"],
     credentials: true,
   })
 );
