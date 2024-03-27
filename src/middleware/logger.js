@@ -10,7 +10,7 @@ const logger = winston.createLogger({
     }),
     json()
   ),
-  transports: [new winston.transports.Console()],
+  transports: [new winston.transports.Console(),{}],
 });
 
 export const morganMiddleware = morgan(

@@ -13,7 +13,7 @@ import verifyJWT from "./src/middleware/verifyJWT.js";
 
 const app = express();
 
-app.use(morganMiddleware);
+// app.use(morganMiddleware);
 app.use(credentials);
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
